@@ -13,18 +13,34 @@ List<GetPage<dynamic>> routes = [
 
   GetPage(name: "/",
     page: ()=> const SplashScreen(),
-    transition: Transition.leftToRightWithFade
+    transition: Transition.rightToLeft
   ),
   GetPage(name: "/home",
     page: ()=> const HomeScreen(),
+      transitionDuration: const Duration(
+        milliseconds: 400
+      ),
+      transition: Transition.rightToLeft
   ),
   GetPage(name: "/selectBusSeatScreen",
     page: ()=> const SelectBusSeatScreen(),
+      transitionDuration: const Duration(
+          milliseconds: 400
+      ),
+      transition: Transition.zoom
   ),
   GetPage(name: "/busListScreen",
     page: ()=> const BusListScreen(),
+    transitionDuration: const Duration(
+        milliseconds: 400
+    ),
+      transition: Transition.downToUp
   ),
   GetPage(name: "/finalScreen",
-    page: ()=> const FinalScreen(),
+    page: ()=>  FinalScreen(),
+    transitionDuration: const Duration(
+        milliseconds: 400
+    ),
+      transition: Transition.zoom
   ),
 ];

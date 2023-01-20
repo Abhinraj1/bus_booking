@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import '../Controller/confettiController.dart';
 import '../manager/testStyleManager.dart';
 
 
 class FinalScreen extends StatelessWidget {
-  const FinalScreen({Key? key}) : super(key: key);
-
+   FinalScreen({Key? key}) : super(key: key);
+ final ConfettiController confettiController = Get.put(ConfettiController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +25,10 @@ class FinalScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const AnimatedEmoji(
+             AnimatedEmoji(
               AnimatedEmojis.confettiBall,
+              animate: true,
+              controller: confettiController.controller,
               size: 200,
               repeat: true,
             ),
