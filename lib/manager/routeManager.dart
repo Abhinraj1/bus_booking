@@ -16,7 +16,7 @@ List<GetPage<dynamic>> routes = [
     transition: Transition.rightToLeft
   ),
   GetPage(name: "/home",
-    page: ()=> const HomeScreen(),
+    page: ()=>  const HomeScreen(),
       transitionDuration: const Duration(
         milliseconds: 400
       ),

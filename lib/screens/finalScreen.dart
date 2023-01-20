@@ -9,7 +9,7 @@ import '../manager/testStyleManager.dart';
 
 class FinalScreen extends StatelessWidget {
    FinalScreen({Key? key}) : super(key: key);
- final ConfettiController confettiController = Get.put(ConfettiController());
+    ConfettiController confettiController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

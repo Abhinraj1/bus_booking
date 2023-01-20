@@ -3,6 +3,9 @@ import 'package:bus_booking/screens/homeScreen/widgets/DatePicker.dart';
 import 'package:bus_booking/screens/homeScreen/widgets/button.dart';
 import 'package:bus_booking/screens/homeScreen/widgets/fromAndToTextField.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../Controller/confettiController.dart';
 import '../../manager/assetManager.dart';
 import '../CommonWidgets/customScaffold.dart';
 
@@ -10,8 +13,9 @@ import '../CommonWidgets/customScaffold.dart';
 
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+   HomeScreen({Key? key}) : super(key: key);
 
+  final ConfettiController confettiController = Get.put(ConfettiController());
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
